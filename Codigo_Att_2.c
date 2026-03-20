@@ -16,6 +16,7 @@ void campeonato();
 void partidaUnica();
 void switchs();
 
+// Funcao menu principoal do game
 
 void menus(){
 
@@ -34,6 +35,8 @@ void menus(){
         printf(" \n");
         
 }
+
+// Aqui estao os switchs de interacao do mmenu
 
 void switchs(){
 
@@ -56,6 +59,8 @@ void switchs(){
 
     }
 }
+
+// Modo partida unica
 
 void partidaUnica(){
 
@@ -110,6 +115,8 @@ void partidaUnica(){
             printf("Voce PERDEU!");
         }
 }
+
+// Modo campeonato
 
 void campeonato(){
 
@@ -192,6 +199,8 @@ void campeonato(){
 }
         while (vitoria < 5 && vitoriapc < 5);
 }
+
+// Funcoa de visualizacao de regras 
 
 void regras(){
 
