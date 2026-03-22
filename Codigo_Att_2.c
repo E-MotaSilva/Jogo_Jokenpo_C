@@ -6,7 +6,6 @@
 
 int escolha, escolhapc, menu, vitoria, vitoriapc;
 int placar1, placar2, empate;
-char *nome[5][50];
 
 // Trazendo as funcoes para o global
 
@@ -22,9 +21,7 @@ void menus(){
 
     printf("\n====== BEM VINDO AO JOGO JOKENPO ======\n");
 
-        
-        printf(" \n");
-        printf("---------------\n");
+        printf("\n---------------\n");
         printf("1 - Iniciar jogo\n");
         printf("2 - Iniciar campeonato melhor de 5\n");
         printf("3 - Ver regras do jogo\n");
@@ -85,19 +82,16 @@ void partidaUnica(){
                     printf("Escolha invalida!\n");               
             }
         if (escolha > 3 || escolha < 1) {
-            printf("Escolha invalida!\n");
+            printf("Escolha invalida!\n\n");
         }
         else if (escolhapc == 1) {
-           printf("Seu adversario escolheu PEDRA\n");
-           printf(" \n");
+           printf("Seu adversario escolheu PEDRA\n\n");
           }
         else if (escolhapc == 2) {
-            printf("Seu adversario escolheu PAPEL\n");
-            printf(" \n");
+            printf("Seu adversario escolheu PAPEL\n\n");
           }
         else {
-            printf("Seu adversario escolheu TESOURA\n");
-            printf(" \n");
+            printf("Seu adversario escolheu TESOURA\n\n");
           }
         if (escolha == escolhapc) {
             printf("Voces EMPATARAM!\n");
@@ -109,10 +103,10 @@ void partidaUnica(){
                 (escolha > escolhapc && escolhapc != 1) ||
                 (escolha == 2 && escolhapc == 1) ||
                 (escolha == 1 && escolhapc ==3) ) {
-            printf("Voce GANHOU!");
+            printf("Voce GANHOU!\n");
         }
         else {
-            printf("Voce PERDEU!");
+            printf("Voce PERDEU!\n");
         }
 }
 
@@ -156,16 +150,13 @@ void campeonato(){
             printf("Escolha invalida!\n");
         }
         else if (escolhapc == 1) {
-           printf("Seu adversario escolheu PEDRA\n");
-           printf(" \n");
+           printf("Seu adversario escolheu PEDRA\n\n");
           }
         else if (escolhapc == 2) {
-            printf("Seu adversario escolheu PAPEL\n");
-            printf(" \n");
+            printf("Seu adversario escolheu PAPEL\n\n");
           }
         else {
-            printf("Seu adversario escolheu TESOURA\n");
-            printf(" \n");
+            printf("Seu adversario escolheu TESOURA\n\n");
           }
         if (escolha == escolhapc) {
             printf("Partida empatada\n");
@@ -183,10 +174,9 @@ void campeonato(){
             printf("Voce ganhou a partida\n");
         }
         else {
-            printf("Voce perdeu a partida\n");
+            printf("Voce perdeu a partida\n\n");
             vitoriapc++;
             placar2++;
-            printf(" \n");
         }
             printf("Placar: Voce = %d, Adversario = %d, Empates = %d\n", placar1, placar2, empate);
         if (vitoria >= 5 && vitoriapc < 5) {
@@ -208,8 +198,7 @@ void regras(){
             printf("PEDRA ganha de TESOURA\n");
             printf("TESOURA ganha de PAPEL\n");
             printf("PAPEL ganha de PEDRA\n");
-            printf("Opcoes iguais equivalem a um EMPATE\n");
-            printf(" \n");
+            printf("Opcoes iguais equivalem a um EMPATE\n\n");
 }
 
 int main(){
